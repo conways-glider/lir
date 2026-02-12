@@ -12,7 +12,7 @@ pub enum Message {
 }
 
 impl Counter {
-    pub fn view(&self) -> Column<Message> {
+    pub fn view(&'_ self) -> Column<'_, Message> {
         // We use a column: a simple vertical layout
         column![
             // The increment button. We tell it to produce an
